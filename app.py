@@ -1,11 +1,14 @@
 from flask import Flask
 from flask_restful import Resource, Api, reqparse
-import to_do_list
 
 app = Flask(__name__)
 api = Api(app)
 
-to_do_list = open("to_do_list.py", w+)
+to_do_list = {
+    1: 'learn how to use flask better',
+    2: 'find some way to make money off coding',
+    3: 'disappear into the woods'
+}
 
 class Todo(Resource):
 
