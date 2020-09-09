@@ -33,12 +33,12 @@ class Todo(Resource):
         args =  parser.parse_args()
         id = args.get('id')
         task = args.get('task')
-        new_entry = {id : task}
+        updated_entry = {id : task}
 
 
         if id in to_do_list.keys():
             to_do_list[id] = task
-            return new_entry
+            return updated_entry
         else:
             return 404
 
